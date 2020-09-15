@@ -1,0 +1,22 @@
+--cpu Cortex-M3
+"adapter\startup_stm32f103xb.o"
+"adapter\3x4keyboard.o"
+"adapter\bposlight.o"
+"adapter\main.o"
+"adapter\gpio.o"
+"adapter\tim.o"
+"adapter\usart.o"
+"adapter\stm32f1xx_it.o"
+"adapter\stm32f1xx_ll_gpio.o"
+"adapter\stm32f1xx_ll_pwr.o"
+"adapter\stm32f1xx_ll_exti.o"
+"adapter\stm32f1xx_ll_tim.o"
+"adapter\stm32f1xx_ll_dma.o"
+"adapter\stm32f1xx_ll_usart.o"
+"adapter\stm32f1xx_ll_rcc.o"
+"adapter\stm32f1xx_ll_utils.o"
+"adapter\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter "adapter\adapter.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "adapter.map" -o adapter\adapter.axf
